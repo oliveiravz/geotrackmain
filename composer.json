@@ -1,12 +1,19 @@
 {
-    "name": "gottlob/geotrackmain",
-    "require": {
-        "symfony/var-dumper": "^7.0",
-        "vlucas/phpdotenv": "^5.6"
-    },
+    "name": "joaovictor/geotrack",
     "autoload": {
         "psr-4": {
-            "Gottlob\\Geotrackmain\\": "class/"
+            "App\\": "app/"
         }
+    },
+    "authors": [
+        {
+            "name": "João Victor",
+            "email": "614947@univem.edu.br"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "ramsey/uuid": "^4.7",
+        "symfony/var-dumper": "^6.0"
     }
 }
