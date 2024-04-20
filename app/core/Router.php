@@ -18,20 +18,18 @@ class Router
 
         $url = $this->parseURL();
 
-        if (file_exists("../app/controllers/" . ucfirst($url[1]) . ".php")) {
-
+        if (file_exists("..".DIRECTORY_SEPARATOR."app".DIRECTORY_SEPARATOR."controllers".DIRECTORY_SEPARATOR. ucfirst($url[1]) . ".php")) {
             $this->controller = $url[1];
             unset($url[1]);
 
         } elseif (empty($url[1])) {
-
-            echo "Hello GeoTrack API";
-
+            echo "Informe uma Rota";
             exit;
 
         } else {
             http_response_code(404);
-            echo json_encode(["erro" => "Recurso não encontrado"]);
+            echo json_encode(["code" => 404, "erro" => "Rota não encontrada"]);
+            exit;
         }
 
         $className = "\\App\\controllers\\".ucfirst($this->controller)."";
