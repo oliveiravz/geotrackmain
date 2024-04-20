@@ -16,9 +16,9 @@ class Connection
         $dotenv->load();
 
         try {
-            $hostname = $_ENV['HOSTNAME'];
+            $hostname = $_ENV['HOST'];
             $port     = $_ENV['PORT'];
-            $username = $_ENV['USERNAME'];
+            $username = $_ENV['USER'];
             $password = $_ENV['PASSWORD'];
             $database = $_ENV['DATABASE'];
         
