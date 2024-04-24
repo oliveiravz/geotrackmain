@@ -22,6 +22,6 @@ class Controller{
         $obj  = json_decode($json);
     
         return $obj;
-      }
+    }
 
 }
