@@ -15,7 +15,10 @@ $cordinates = [
 
 $publisher = new Mqtt($rabbitmq_host, $rabbitmq_port, $rabbitmq_queue);
 
-$publisher->consumeApiAndSendToRabbitMQ($cordinates);
+// $response = $publisher->consumeApi($cordinates);
+
+$publisher->sendToRabbitMQ($cordinates);
+
 // Desconectando o cliente MQTT
 $mqttClient->disconnect();
 
