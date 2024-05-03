@@ -2,7 +2,7 @@
     "name": "joaovictor/mqtt",
     "require": {
         "php-amqplib/php-amqplib": "^2.8",
-        "guzzlehttp/guzzle": "^7.8"
+        "bluerhinos/phpmqtt": "@dev"
     },
     "autoload": {
         "psr-4": {
