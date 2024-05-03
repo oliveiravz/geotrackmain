@@ -7,5 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'app\\' => array($baseDir . '/app'),
+    'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
+    'PhpMqtt\\Client\\' => array($vendorDir . '/php-mqtt/client/src'),
     'PhpAmqpLib\\' => array($vendorDir . '/php-amqplib/php-amqplib/PhpAmqpLib'),
+    'MyCLabs\\Enum\\' => array($vendorDir . '/myclabs/php-enum/src'),
+    'Bluerhinos\\' => array($vendorDir . '/bluerhinos/phpmqtt'),
 );

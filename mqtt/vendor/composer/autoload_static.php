@@ -13,7 +13,17 @@ class ComposerStaticInit4b8bbf0319ade7de44650c7099ffe747
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
+            'PhpMqtt\\Client\\' => 15,
             'PhpAmqpLib\\' => 11,
+        ),
+        'M' => 
+        array (
+            'MyCLabs\\Enum\\' => 13,
+        ),
+        'B' => 
+        array (
+            'Bluerhinos\\' => 11,
         ),
     );
 
@@ -22,14 +32,31 @@ class ComposerStaticInit4b8bbf0319ade7de44650c7099ffe747
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
+        'PhpMqtt\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-mqtt/client/src',
+        ),
         'PhpAmqpLib\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-amqplib/php-amqplib/PhpAmqpLib',
+        ),
+        'MyCLabs\\Enum\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/myclabs/php-enum/src',
+        ),
+        'Bluerhinos\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bluerhinos/phpmqtt',
         ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Stringable' => __DIR__ . '/..' . '/myclabs/php-enum/stubs/Stringable.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

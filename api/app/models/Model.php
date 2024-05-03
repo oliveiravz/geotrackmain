@@ -10,8 +10,6 @@ class Model
 {
     protected static $tableName = '';
     protected static $columns = [];
-
-
     public function insert($values) {
 
         try {

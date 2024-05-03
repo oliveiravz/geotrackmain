@@ -1,7 +1,8 @@
 {
     "name": "joaovictor/mqtt",
     "require": {
-        "php-amqplib/php-amqplib": "^2.8"
+        "php-amqplib/php-amqplib": "^2.8",
+        "bluerhinos/phpmqtt": "@dev"
     },
     "autoload": {
         "psr-4": {
