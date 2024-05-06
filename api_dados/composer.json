@@ -1,0 +1,21 @@
+{
+    "name": "joaovictor/api_dados",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "João Victor",
+            "email": "614947@univem.edu.br"
+        }
+    ],
+    "require": {
+        "slim/psr7": "^1.6",
+        "nyholm/psr7": "^1.8",
+        "nyholm/psr7-server": "^1.1",
+        "guzzlehttp/psr7": "^1",
+        "slim/slim": "^4.13"
+    }
+}
