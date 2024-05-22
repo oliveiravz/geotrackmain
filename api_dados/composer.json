@@ -2,7 +2,7 @@
     "name": "joaovictor/api_dados",
     "autoload": {
         "psr-4": {
-            "app\\": "app/"
+            "App\\": "app/"
         }
     },
     "authors": [
