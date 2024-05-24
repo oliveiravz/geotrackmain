@@ -18,8 +18,9 @@ class Controller{
     }
 
     protected function getRequestBody(){
+
         $json = file_get_contents("php://input");
-        $obj  = json_decode($json);
+        $obj  = json_decode($json, true);
     
         return $obj;
     }
