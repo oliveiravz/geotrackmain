@@ -14,15 +14,18 @@ $mqtt = new phpMQTT($server, $port, $client_id);
 
 $latlon = generateRandomCoordinates();
 
-$json = json_encode($latlon);
+$lat = $latlon['latitude'];
+$lon = $latlon['longitude'];
 
 while (true) {
     if ($mqtt->connect(true, NULL, $username, $password)) {
         
-        $mqtt->publish("geotrack/mqtt/coordinates", "Coordenadas - {$json} enviadas em: " . date("d/m/Y H:i:s"), 0, false);
+        $mqtt->publish("geotrack/mqtt/coordinates", "Coordenadas - {$lat} {$lon} enviadas em: " . date("d/m/Y H:i:s"), 0, false);
 
         $curl = curl_init();
-    
+
+        $json = json_encode($latlon);
+
         curl_setopt_array($curl, array(
             CURLOPT_URL => 'http://localhost:8081/geotrack/mqtt/coordinates',
             CURLOPT_RETURNTRANSFER => true,
@@ -41,8 +44,6 @@ while (true) {
         $response = curl_exec($curl);
     
         curl_close($curl);
-        echo $response;
-
 
         $mqtt->close();
     } else {
@@ -59,10 +60,8 @@ function generateRandomCoordinates() {
     $latitude = rand(-9000000, 9000000) / 100000;
     $longitude = rand(-18000000, 18000000) / 100000;
 
-    $coordinates[] = [
-        'latitude' => $latitude,
-        'longitude' => $longitude
-    ];
+    $coordinates["latitude"] = $latitude;
+    $coordinates["longitude"] = $longitude;
 
     return $coordinates;
 }
