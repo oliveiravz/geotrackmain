@@ -3,7 +3,7 @@
         'name' => 'joaovictor/mqtt',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '22df9a3a81721aacee48b1f8655e3003c1a021fd',
+        'reference' => '6e9961ec5df41af9d1a2aee704c6e0dc3523db9b',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -24,7 +24,7 @@
         'joaovictor/mqtt' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '22df9a3a81721aacee48b1f8655e3003c1a021fd',
+            'reference' => '6e9961ec5df41af9d1a2aee704c6e0dc3523db9b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
