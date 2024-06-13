@@ -13,7 +13,7 @@ class Coord extends Model
 
     public function newCoord($values)
     {   
-
+        var_dump($values);
         $coords = json_decode($values, true);
 
         foreach ($coords as $key => $value) {
