@@ -2,6 +2,19 @@
 
 namespace App\Services;
 
+require_once __DIR__ . '/../../../vendor/autoload.php';
+
+// Definindo constantes de socket se não estiverem definidas
+if (!defined('SOCKET_EAGAIN')) {
+    define('SOCKET_EAGAIN', 11); // Try again
+}
+if (!defined('SOCKET_EWOULDBLOCK')) {
+    define('SOCKET_EWOULDBLOCK', 11); // Operation would block
+}
+if (!defined('SOCKET_EINTR')) {
+    define('SOCKET_EINTR', 4); // Interrupted system call
+}
+
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
@@ -10,9 +23,10 @@ class Queue
     private $connection;
     private $channel;
 
-    public function __construct($host, $port, $user, $password)
+    public function __construct()
     {
-        $this->connection = new AMQPStreamConnection($host, $port, $user, $password);
+        // Certifique-se de fornecer os parâmetros corretos de conexão
+        $this->connection = new AMQPStreamConnection('localhost', 5672, 'guest', 'guest');
         $this->channel = $this->connection->channel();
     }
 

@@ -46,7 +46,7 @@ class Router
     }
 
     private function callback() {
-        call_user_func_array([$this->controller, $this->controllerMethod], $this->params);
+        call_user_func_array($this->controller, $this->controllerMethod, $this->params);
     }
 
     private function postRequest() {
